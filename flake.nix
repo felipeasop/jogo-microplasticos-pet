@@ -1,5 +1,5 @@
 {
-  description = "Ambiente de desenvolvimento do jogo de economia circular";
+  description = "Ambiente de desenvolvimento do jogo educativo sobre coleta de resíduos, explorando do macro ao micros";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -15,10 +15,10 @@
         in
         {
           default = pkgs.mkShell {
-            packages = [
-              pkgs.godot_4-mono
-              pkgs.dotnet-sdk_8
-              pkgs.sqlite
+            packages = with pkgs; [
+              godot_4-mono
+              dotnet-sdk_8
+              sqlite
             ];
 
             shellHook = ''
