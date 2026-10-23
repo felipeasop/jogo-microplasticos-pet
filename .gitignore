@@ -1,3 +1,8 @@
 .godot/
+bin/
+obj/
+*.sqlite3*
 
 result
+
+export/
