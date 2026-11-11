@@ -1,0 +1,306 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://src/Jogo/ControladorPartida.cs" id="1_game"]
+[ext_resource type="Script" path="res://src/Jogo/PainelResultado.cs" id="2_results"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_hud"]
+bg_color = Color(0.07, 0.17, 0.13, 0.88)
+content_margin_left = 20.0
+content_margin_right = 12.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_footer"]
+bg_color = Color(0.07, 0.17, 0.13, 0.88)
+content_margin_left = 20.0
+content_margin_right = 12.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_notice"]
+bg_color = Color(0.07, 0.17, 0.13, 0.85)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+content_margin_left = 20.0
+content_margin_top = 8.0
+content_margin_right = 20.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBox_result_padding"]
+content_margin_left = 60.0
+content_margin_top = 16.0
+content_margin_right = 60.0
+content_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_confirm_panel"]
+bg_color = Color(0.094, 0.231, 0.196, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.949, 0.757, 0.365, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+content_margin_left = 40.0
+content_margin_top = 32.0
+content_margin_right = 40.0
+content_margin_bottom = 32.0
+
+[node name="ControladorPartida" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_game")
+
+[node name="Hud" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 68.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBox_hud")
+
+[node name="Actions" type="HBoxContainer" parent="Hud"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Left" type="HBoxContainer" parent="Hud/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 28
+
+[node name="TimeLabel" type="Label" parent="Hud/Actions/Left"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "TEMPO: 45 SEG"
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Hud/Actions/Left"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "PONTOS: 0"
+vertical_alignment = 1
+
+[node name="ScaleLabel" type="Label" parent="Hud/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.83, 0.31, 1)
+theme_override_font_sizes/font_size = 22
+text = "ESCALA 1/3 · AMBIENTE VISÍVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="HBoxContainer" parent="Hud/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="HintButton" type="Button" parent="Hud/Actions/Right"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 52)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "DICA (5) · −3 SEG"
+
+[node name="NoticePanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -460.0
+offset_top = 80.0
+offset_right = 460.0
+offset_bottom = 120.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBox_notice")
+
+[node name="LayerNotice" type="Label" parent="NoticePanel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Footer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBox_footer")
+
+[node name="Actions" type="HBoxContainer" parent="Footer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ScenarioLabel" type="Label" parent="Footer/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+
+[node name="LeaveButton" type="Button" parent="Footer/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(120, 48)
+theme_type_variation = &"SecondaryButton"
+theme_override_font_sizes/font_size = 20
+text = "SAIR"
+
+[node name="ResultPanel" type="PanelContainer" parent="."]
+script = ExtResource("2_results")
+unique_name_in_owner = true
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="ScrollContainer" parent="ResultPanel"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBox_result_padding")
+horizontal_scroll_mode = 0
+
+[node name="Content" type="VBoxContainer" parent="ResultPanel/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="ResultTitle" type="Label" parent="ResultPanel/Margin/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "RESULTADO"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ResultSummary" type="Label" parent="ResultPanel/Margin/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="Instruction" type="Label" parent="ResultPanel/Margin/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "TOQUE EM UM TIPO ENCONTRADO PARA SABER MAIS."
+horizontal_alignment = 1
+
+[node name="ResultTypes" type="GridContainer" parent="ResultPanel/Margin/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 6
+
+[node name="EducationText" type="Label" parent="ResultPanel/Margin/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ReturnButton" type="Button" parent="ResultPanel/Margin/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 54)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 21
+text = "CONCLUIR E VOLTAR AO INÍCIO"
+theme_type_variation = &"SecondaryButton"
+
+[node name="LeaveConfirm" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 30
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="LeaveConfirm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.62)
+
+[node name="Center" type="CenterContainer" parent="LeaveConfirm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="LeaveConfirm/Center"]
+custom_minimum_size = Vector2(760, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBox_confirm_panel")
+
+[node name="Content" type="VBoxContainer" parent="LeaveConfirm/Center/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Title" type="Label" parent="LeaveConfirm/Center/Panel/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "QUER MESMO SAIR?"
+horizontal_alignment = 1
+
+[node name="Message" type="Label" parent="LeaveConfirm/Center/Panel/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "O TEMPO ESTÁ PAUSADO. SE SAIR, A PARTIDA TERMINA E O JOGO VOLTA AO INÍCIO."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Actions" type="HBoxContainer" parent="LeaveConfirm/Center/Panel/Content"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="LeaveConfirmButton" type="Button" parent="LeaveConfirm/Center/Panel/Content/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 72)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"SecondaryButton"
+theme_override_font_sizes/font_size = 22
+text = "SAIR DA PARTIDA"
+
+[node name="LeaveCancelButton" type="Button" parent="LeaveConfirm/Center/Panel/Content/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 72)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"PrimaryButton"
+theme_override_font_sizes/font_size = 22
+text = "CONTINUAR JOGANDO"
