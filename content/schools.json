@@ -1,0 +1,145 @@
+{
+  "version": "2026-10-28-uenp-comunidade",
+  "source": "https://vanescolarparana.com/escolas",
+  "cities": [
+    {
+      "name": "ABATIÁ",
+      "schools": [
+        "Colégio Estadual Afrânio Peixoto",
+        "Colégio Estadual Rui Barbosa N",
+        "Colégio Estadual Nimboeaty Awa Tirope",
+        "Escola Jan Kosk",
+        "Escola Municipal Bosco Domei"
+      ]
+    },
+    {
+      "name": "ANDIRÁ",
+      "schools": [
+        "Colégio Estadual Hiram Rolim Lamas Efm",
+        "Escola Municipal Ernesto Zenith Matisao Profef",
+        "Escola Municipal Caetana Martins Profaei",
+        "Bracos Abertos",
+        "Colégio Estadual Maria Arminda Profef",
+        "Escola Municipal Joao Paulino V Filhoe Drei",
+        "Escola Municipal Olimpia Breyer Profaei",
+        "Escola Joana Machado",
+        "Colégio Estadual Rocha Pombo P",
+        "Colégio Estadual Centro Est Ed Dr Brasilio Machado",
+        "Escola Municipal Gil Feres Profei",
+        "Escola Municipal Aracy Pinheiro Lima Profaei",
+        "Colégio Estadual Moyses Lupion Cmef N",
+        "Escola Municipal Maria Rosa Cecyn Profaei",
+        "Escola Municipal Miranda Couto Drei",
+        "Escola Municipal Octavio Secundino Mei",
+        "Colégio Estadual Altahir Goncalves",
+        "Escola Municipal Cleuza de L Tagliatela Pfaei"
+      ]
+    },
+    {
+      "name": "BANDEIRANTES",
+      "schools": [
+        "Colégio Estadual Lourenco Ormenezze do Cef",
+        "Escola Municipal Riciere Ormenezze R Mei",
+        "Escola Municipal Yukiti Matida Mei",
+        "Escola Municipal Maria Inês Speer Faria",
+        "Escola Municipal Santa Rita de Cassiac",
+        "Colégio Estadual Nossa Sra da Candelariac do Cef",
+        "Escola Municipal Felipe de a Campos Mei",
+        "Escola Municipal Dr. Bezerra de Menezes",
+        "Escola Municipal Yoricide Miyoshic",
+        "Escola Municipal Maria de Lourdes G. Mendes",
+        "Escola Pequeno Principe",
+        "Colégio Estadual Cecília Meireles",
+        "Escola Municipal Diogenes P Vasconcelos Mei",
+        "Escola Municipal Joao do Santiago",
+        "Colégio Estadual Juvenal Mesquita",
+        "Colegio Maximus",
+        "Colégio Estadual Cyriaco Russo Eem N",
+        "Colégio Estadual Nóbrega da Cunha",
+        "Escola Municipal Leda de L Canario Mei",
+        "Franciscana Santa Isabel e Ed Inf e Ens Fundamental",
+        "Escola Municipal Hestuco Kawasaky",
+        "Colégio Estadual Centro Est Educ Ozorio G Nogueira",
+        "Colégio Estadual Huberto Teixeira Ribeiro",
+        "Colégio Estadual Mailon Medeiros Cm Profef",
+        "Escola Municipal Santa Terezinha Mei",
+        "Colégio Estadual Bairro Bela Vista Doef",
+        "Escola Municipal Tei Matidac",
+        "Escola Municipal Paulo Meneghelc",
+        "Escola Municipal Rotaryc",
+        "Escola Ecel de Bandeirantesc",
+        "Escola Municipal Prefeito Moacyr Castanho",
+        "UENP — Campus Luiz Meneghel",
+        "CMEI Maria Alzira de Souza Trindade",
+        "Escola Rural Municipal Zulmira de Albuquerque"
+      ]
+    },
+    {
+      "name": "BARRA DO JACARÉ",
+      "schools": [
+        "Colégio Estadual Maria F Souza",
+        "Construindo o Saber e Ei Ef Mod Ee",
+        "Escola Municipal Pio Xii Mei"
+      ]
+    },
+    {
+      "name": "CAMBARÁ",
+      "schools": [
+        "Colégio Estadual Generoso Marques Cm Dref",
+        "Escola Municipal Maria Alice Bit a Forti Mei",
+        "Escola Municipal Ignez Panichi Hamze Mei",
+        "Escola Municipal Mundo Felizc",
+        "O Caminho",
+        "Escola Municipal Caetano Vezozzo Mei",
+        "Colégio Estadual Carolina Lupion Cm Donaef",
+        "Escola Municipal Luiz Antônio Lorenzette Profei",
+        "Bom Jesusc",
+        "Cambara C em",
+        "Colégio Estadual Angelina R Vezozzo",
+        "Colégio Estadual Centro Est Educ a Mohamad a Hamze",
+        "Colégio Estadual Lucy Requiao Silva",
+        "Colégio Estadual Silvio Tavares Profef N",
+        "Escola Mensageiros de Luz",
+        "Escola Mundo Magico Educacao Infantil Ensino Fundamental",
+        "Escola Municipal Maria Ap Paulina da S Furlan Mei",
+        "Escola Nossa Senhora das Gracas"
+      ]
+    },
+    {
+      "name": "ITAMBARACÁ",
+      "schools": [
+        "Escola Municipal Joao Paulo Ii",
+        "Escola Municipal Sebastiao S Silva",
+        "Colégio Estadual Marcilio Dias N",
+        "Colégio Estadual Bairro Raul Marinho",
+        "Colégio Estadual Mirazinha Braga",
+        "Escola Municipal Elza Ruiz Vieira"
+      ]
+    },
+    {
+      "name": "SANTA AMÉLIA",
+      "schools": [
+        "Colégio Estadual Carlirio G dos Santos",
+        "Escola Municipal Francisco S Leal Prefef",
+        "Colégio Estadual Tudja Nhanderu Ind Caciqueei",
+        "Colégio Estadual Vinicius de Morais Eem",
+        "Escola Municipal Caminhos do Coracao Mei"
+      ]
+    },
+    {
+      "name": "SANTA MARIANA",
+      "schools": [
+        "Escola Municipal Carmela Dutra Mei",
+        "Escola Municipal Pedro da Silva Mei",
+        "Maranata",
+        "Escola Municipal Engracia Zanquetta Mei",
+        "Escola Municipal Etelvina Franca Machado",
+        "Colégio Estadual Antônio Pereira Lima Dref",
+        "Colégio Estadual Carlos Augusto Nichols",
+        "Colégio Estadual Centro Est Educ Ag Fernando Costa",
+        "Colégio Estadual Joaquim Assis",
+        "Escola Rodolfo Wild"
+      ]
+    }
+  ]
+}
