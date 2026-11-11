@@ -9,5 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.31" />
+    <Compile Remove="testes/**/*.cs" />
+    <Compile Include="testes/VerificacoesProjeto.cs" Condition="'$(Configuration)' == 'Debug'" />
   </ItemGroup>
 </Project>
