@@ -1,0 +1,211 @@
+{
+  "version": "test-2026-10-28-frases",
+  "collectibles": {
+    "garrafas_pet_conjunto": { "type": "GARRAFA PLÁSTICA", "texture": "res://assets/coletaveis/escala-1/varias-garrafas-pet-amassadas.png", "scale": 1, "size": 45 },
+    "saco_lixo": { "type": "SACO DE LIXO", "texture": "res://assets/coletaveis/escala-1/saco-lixo.png", "scale": 1, "size": 80 },
+    "sacola_plastica_visao_geral": { "type": "SACOLA PLÁSTICA", "texture": "res://assets/coletaveis/escala-1/sacola-plastica-azul.png", "scale": 1, "size": 28 },
+    "garrafa_pet_visao_geral": { "type": "GARRAFA PLÁSTICA", "texture": "res://assets/coletaveis/escala-1/garrafa-pet-amassada.png", "scale": 1, "size": 18 },
+    "sacola_plastica": { "type": "SACOLA PLÁSTICA", "texture": "res://assets/coletaveis/escala-2/sacola-plastica-azul.png", "scale": 2, "size": 112 },
+    "garrafa_pet": { "type": "GARRAFA PLÁSTICA", "texture": "res://assets/coletaveis/escala-2/garrafa-pet-amassada.png", "scale": 2, "size": 72 },
+    "papel": { "type": "PAPEL", "texture": "res://assets/coletaveis/escala-2/papel-amassado-1.png", "scale": 2, "size": 40 },
+    "oculos": { "type": "ÓCULOS", "texture": "res://assets/coletaveis/escala-2/oculos.png", "scale": 2, "size": 56 },
+    "celular": { "type": "CELULAR", "texture": "res://assets/coletaveis/escala-2/celular-1.png", "scale": 2, "size": 52 },
+    "canudo_detalhe": { "type": "CANUDO", "texture": "res://assets/coletaveis/escala-2/canudo.png", "scale": 2, "size": 76 },
+    "tampinha": { "type": "TAMPINHA", "texture": "res://assets/coletaveis/escala-3/tampinha.png", "scale": 3, "size": 45 },
+    "bituca_cigarro": { "type": "BITUCA DE CIGARRO", "texture": "res://assets/coletaveis/escala-3/cigarro.png", "scale": 3, "size": 52 },
+    "fosforo": { "type": "FÓSFORO", "texture": "res://assets/coletaveis/escala-3/fosforo.png", "scale": 3, "size": 60 },
+    "pendrive": { "type": "PENDRIVE", "texture": "res://assets/coletaveis/escala-3/pendrive.png", "scale": 3, "size": 60 },
+    "microplasticos_1": { "type": "MICROPLÁSTICOS", "texture": "res://assets/coletaveis/escala-4/microplasticos-1.png", "scale": 4, "size": 56 },
+    "microplasticos_2": { "type": "MICROPLÁSTICOS", "texture": "res://assets/coletaveis/escala-4/microplasticos-2.png", "scale": 4, "size": 56 }
+  },
+  "messages": {
+    "GARRAFA PLÁSTICA": "GARRAFAS DESCARTADAS PODEM SE QUEBRAR EM PEDAÇOS CADA VEZ MENORES. REDUZIR O USO E DESCARTAR CORRETAMENTE AJUDA A EVITAR ESSE CAMINHO.",
+    "SACO DE LIXO": "SACOS ABANDONADOS PODEM SER LEVADOS PELA CHUVA E PELO VENTO ATÉ A ÁGUA. MANTER O LIXO CONTIDO EVITA QUE ELE SE ESPALHE.",
+    "SACOLA PLÁSTICA": "SACOLAS SOLTAS PODEM CHEGAR A RIACHOS E PRAIAS. REUTILIZAR UMA BOLSA E DESCARTAR A SACOLA CORRETAMENTE REDUZ ESSE RISCO.",
+    "PAPEL": "PAPEL TAMBÉM É RESÍDUO FORA DO LUGAR. RECOLHER E SEPARAR O MATERIAL AJUDA A CUIDAR DO AMBIENTE.",
+    "CANUDO": "CANUDOS PLÁSTICOS PODEM SER CARREGADOS PARA A ÁGUA E SE FRAGMENTAR. EVITAR OS DESCARTÁVEIS QUANDO POSSÍVEL DIMINUI ESSA FONTE.",
+    "TAMPINHA": "TAMPINHAS PODEM SER LEVADAS PELA ÁGUA E VIRAR FRAGMENTOS MENORES COM O TEMPO. ELAS DEVEM IR PARA O DESCARTE ADEQUADO.",
+    "BITUCA DE CIGARRO": "MUITAS BITUCAS TÊM FILTROS COM FIBRAS PLÁSTICAS. NO CHÃO, A CHUVA E O SOL SOLTAM ESSAS FIBRAS, QUE PODEM CHEGAR À ÁGUA.",
+    "ÓCULOS": "ARMAÇÕES E LENTES PODEM CONTER PLÁSTICO. OBJETOS ESQUECIDOS NO CHÃO PODEM SE FRAGMENTAR COM O TEMPO.",
+    "CELULAR": "ELETRÔNICOS CONTÊM MATERIAIS QUE PEDEM COLETA ESPECIAL. NÃO DEVEM SER DEIXADOS NO SOLO OU NA ÁGUA.",
+    "FÓSFORO": "PEQUENOS RESÍDUOS TAMBÉM PODEM SER LEVADOS PELA ÁGUA. O DESCARTE CORRETO EVITA QUE SE ACUMULEM NO AMBIENTE.",
+    "PENDRIVE": "PENDRIVES TÊM PLÁSTICO E COMPONENTES ELETRÔNICOS. DEVEM IR PARA A COLETA DE ELETRÔNICOS.",
+    "MICROPLÁSTICOS": "MICROPLÁSTICOS SÃO PARTÍCULAS PEQUENAS DE PLÁSTICO. PODEM SE ESPALHAR PELA ÁGUA E AFETAR SERES VIVOS. AQUI SÃO MOSTRADOS POR UMA LENTE EDUCATIVA."
+  },
+  "scenarios": [
+    {
+      "id": "facil",
+      "name": "COMEÇAR",
+      "place": "CAMPUS DA UENP",
+      "selectable": true,
+      "spawnGap": 32,
+      "sizeMultiplier": 1.3,
+      "closingMessage": "ATÉ UM GRAMADO QUE PARECE LIMPO PODE ESCONDER RESÍDUOS QUE SE QUEBRAM EM PEDAÇOS MENORES. REDUZIR O USO DE PLÁSTICO E DESCARTAR BEM PROTEGE O AMBIENTE.",
+      "views": [
+        {
+          "id": "visao_geral",
+          "name": "VISÃO GERAL",
+          "scale": 1,
+          "nextId": "detalhe",
+          "background": "res://assets/scenarios/facil/1-1.png",
+          "mapScene": "res://scenes/gameplay/maps/FacilVisaoGeral.tscn",
+          "spawns": [
+            { "zone": "grama_fundo", "items": ["garrafas_pet_conjunto", "saco_lixo"], "count": 2 },
+            { "zone": "grama_frente", "items": ["sacola_plastica_visao_geral", "garrafa_pet_visao_geral"], "count": 2 }
+          ]
+        },
+        {
+          "id": "detalhe",
+          "name": "DE PERTO",
+          "scale": 2,
+          "parentId": "visao_geral",
+          "nextId": "lente",
+          "background": "res://assets/scenarios/facil/1-2.png",
+          "mapScene": "res://scenes/gameplay/maps/FacilDetalhe.tscn",
+          "spawns": [
+            { "zone": "grama", "items": ["garrafa_pet", "sacola_plastica", "canudo_detalhe", "papel"], "count": 4 }
+          ]
+        },
+        {
+          "id": "lente",
+          "name": "LENTE EDUCATIVA",
+          "scale": 3,
+          "parentId": "detalhe",
+          "nextId": "microscopio",
+          "background": "res://assets/scenarios/facil/1-3.png",
+          "mapScene": "res://scenes/gameplay/maps/FacilLente.tscn",
+          "spawns": [
+            { "zone": "grama", "items": ["tampinha", "bituca_cigarro"], "count": 2 }
+          ]
+        },
+        {
+          "id": "microscopio",
+          "name": "MICROSCÓPIO EDUCATIVO",
+          "scale": 4,
+          "parentId": "lente",
+          "background": "res://assets/scenarios/facil/1-4.png",
+          "mapScene": "res://scenes/gameplay/maps/FacilMicroscopio.tscn",
+          "spawns": [
+            { "zone": "campo", "items": ["microplasticos_1", "microplasticos_2"], "count": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "medio",
+      "name": "EXPLORAR",
+      "place": "PARQUE DO POVO",
+      "selectable": true,
+      "spawnGap": 26,
+      "closingMessage": "RESÍDUOS MAIORES PODEM SE FRAGMENTAR E CHEGAR À ÁGUA. PREVENIR O DESCARTE NO AMBIENTE PROTEGE TODO O ECOSSISTEMA.",
+      "views": [
+        {
+          "id": "visao_geral",
+          "name": "VISÃO GERAL",
+          "scale": 1,
+          "nextId": "detalhe",
+          "background": "res://assets/scenarios/medio/2-1.png",
+          "mapScene": "res://scenes/gameplay/maps/MedioVisaoGeral.tscn",
+          "spawns": [
+            { "zone": "caminho", "items": ["saco_lixo", "garrafas_pet_conjunto"], "count": 1 },
+            { "zone": "grama", "items": ["sacola_plastica_visao_geral", "garrafas_pet_conjunto", "saco_lixo"], "count": 4 }
+          ]
+        },
+        {
+          "id": "detalhe",
+          "name": "DE PERTO",
+          "scale": 2,
+          "parentId": "visao_geral",
+          "nextId": "lente",
+          "background": "res://assets/scenarios/medio/2-2.png",
+          "mapScene": "res://scenes/gameplay/maps/MedioDetalhe.tscn",
+          "spawns": [
+            { "zone": "caminho", "items": ["garrafa_pet", "papel"], "count": 2 },
+            { "zone": "grama", "items": ["sacola_plastica", "canudo_detalhe", "garrafa_pet"], "count": 3 }
+          ]
+        },
+        {
+          "id": "lente",
+          "name": "LENTE EDUCATIVA",
+          "scale": 3,
+          "parentId": "detalhe",
+          "nextId": "microscopio",
+          "background": "res://assets/scenarios/medio/2-3.png",
+          "mapScene": "res://scenes/gameplay/maps/MedioLente.tscn",
+          "spawns": [
+            { "zone": "solo", "items": ["tampinha", "bituca_cigarro"], "count": 2 },
+            { "zone": "grama", "items": ["tampinha", "bituca_cigarro"], "count": 1 }
+          ]
+        },
+        {
+          "id": "microscopio",
+          "name": "MICROSCÓPIO EDUCATIVO",
+          "scale": 4,
+          "parentId": "lente",
+          "background": "res://assets/scenarios/medio/2-4.png",
+          "mapScene": "res://scenes/gameplay/maps/MedioMicroscopio.tscn",
+          "spawns": [
+            { "zone": "campo", "items": ["microplasticos_1", "microplasticos_2"], "count": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dificil",
+      "name": "INVESTIGAR",
+      "place": "HOTEL YARA",
+      "selectable": true,
+      "spawnGap": 18,
+      "closingMessage": "O LIXO PODE IR ALÉM DO LUGAR ONDE FOI DEIXADO. EVITAR DESCARTÁVEIS E DESCARTAR BEM AJUDA A PROTEGER O AMBIENTE.",
+      "views": [
+        {
+          "id": "visao_geral",
+          "name": "VISÃO GERAL",
+          "scale": 1,
+          "nextId": "detalhe",
+          "background": "res://assets/scenarios/dificil/3-1.png",
+          "mapScene": "res://scenes/gameplay/maps/DificilVisaoGeral.tscn",
+          "spawns": [
+            { "zone": "caminho", "items": ["garrafas_pet_conjunto", "saco_lixo"], "count": 1 },
+            { "zone": "grama", "items": ["sacola_plastica_visao_geral", "garrafa_pet_visao_geral", "garrafas_pet_conjunto"], "count": 3 }
+          ]
+        },
+        {
+          "id": "detalhe",
+          "name": "DE PERTO",
+          "scale": 2,
+          "parentId": "visao_geral",
+          "nextId": "lente",
+          "background": "res://assets/scenarios/dificil/3-2.png",
+          "mapScene": "res://scenes/gameplay/maps/DificilDetalhe.tscn",
+          "spawns": [
+            { "zone": "chao", "items": ["garrafa_pet", "sacola_plastica", "canudo_detalhe", "papel", "oculos", "celular"], "count": 7 }
+          ]
+        },
+        {
+          "id": "lente",
+          "name": "LENTE EDUCATIVA",
+          "scale": 3,
+          "parentId": "detalhe",
+          "nextId": "microscopio",
+          "background": "res://assets/scenarios/dificil/3-3.png",
+          "mapScene": "res://scenes/gameplay/maps/DificilLente.tscn",
+          "spawns": [
+            { "zone": "grama", "items": ["tampinha", "bituca_cigarro", "fosforo", "pendrive"], "count": 5 }
+          ]
+        },
+        {
+          "id": "microscopio",
+          "name": "MICROSCÓPIO EDUCATIVO",
+          "scale": 4,
+          "parentId": "lente",
+          "background": "res://assets/scenarios/dificil/3-4.png",
+          "mapScene": "res://scenes/gameplay/maps/DificilMicroscopio.tscn",
+          "spawns": [
+            { "zone": "campo", "items": ["microplasticos_1", "microplasticos_2"], "count": 4 }
+          ]
+        }
+      ]
+    }
+  ]
+}
