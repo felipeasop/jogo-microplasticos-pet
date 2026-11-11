@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/Jogo/Cenarios/MapaVista.cs" id="1_map"]
+[ext_resource type="Texture2D" path="res://assets/scenarios/dificil/3-3.png" id="2_image"]
+[ext_resource type="Script" path="res://src/Jogo/Cenarios/ZonaSorteio.cs" id="3_zone"]
+
+[node name="DificilLente" type="Node2D"]
+script = ExtResource("1_map")
+
+[node name="EditorReference" type="Sprite2D" parent="."]
+texture = ExtResource("2_image")
+centered = false
+scale = Vector2(0.76555024, 0.76555024)
+region_enabled = true
+region_rect = Rect2(0, 0.25, 1672, 940.5)
+
+[node name="Grama" type="Area2D" parent="."]
+input_pickable = false
+monitoring = false
+monitorable = false
+script = ExtResource("3_zone")
+IdZona = "grama"
+FatorTamanhoFundo = 0.6
+FatorTamanhoFrente = 0.733
+
+[node name="Polygon" type="CollisionPolygon2D" parent="Grama"]
+polygon = PackedVector2Array(65, 235, 1215, 235, 1215, 625, 65, 625)
